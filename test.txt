@@ -1,3 +1,4 @@
 Hi, I am learning DevOps AWS
 connecting authentication from local to github
 this is for testing
+validation failed from vsc
