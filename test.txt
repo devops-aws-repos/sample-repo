@@ -5,3 +5,5 @@ validation failed from vsc
 new validation from visual studio 
 
 add ; commit ; push #parallelly 
+
+DevOps has en number of tools which are integrated alltogether to build, test and deploy an Application
