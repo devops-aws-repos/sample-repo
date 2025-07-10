@@ -13,7 +13,7 @@ do
         INSTANCE_TYPE="t2.micro"
     fi
 
-    IP_ADDRESS=$(aws ec2 run-instances --image-id al2023-ami-2023.7.20250623.1-kernel-6.1-x86_64 --instance-type $INSTANCE_TYPE  --security-group-ids sg-050ef4889bc4a5a82)
+    IP_ADDRESS=$(aws ec2 run-instances --image-id ami-05ffe3c48a9991133 --instance-type $INSTANCE_TYPE  --security-group-ids sg-050ef4889bc4a5a82)
    
     echo "$i: $IP_ADDRESS"
 done
