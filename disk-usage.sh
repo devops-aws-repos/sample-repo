@@ -11,12 +11,12 @@ do
 
     if [ $usage -ge $DISK_THRESHOLD ]
     then
-        MESSAGE+="HIGH DISK THRESHOLD" on $partition: $usage\n"
+        MESSAGE+="HIGH DISK THRESHOLD on $partition: $usage <br>"
     fi
 done <<< $DISK_USAGE
+ 
+ echo -e "message: $MESSAGE"
 
-echo -e "message: $MESSAGE"
-
-#echo "$MESSAGE" | mail -s "HIGH ALERT" rajithagona.7310@gmail.com
-
+ #echo "$MESSAGE | mail.sh "High Disk Usage" rajithagona.7310@gmail.com"
+ 
 sh mail.sh "Monitering Team" "High Disk Usage" "$MESSAGE" "rajithagona.7310@gmail.com" "High Alert"
