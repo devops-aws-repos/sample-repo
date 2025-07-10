@@ -8,10 +8,9 @@ while IFS= read -r line
 do
     usage=$(echo $line | awk '{print $6F}' | cut -d % -f1)
     partition=$(echo $line | awk '{print $1F}')
-
     if [ $usage -ge $DISK_THRESHOLD ]
     then
-        MESSAGE+="HIGH DISK THRESHOLD on $partition: $usage<br>"
+        MESSAGE+="High Disk Usage on $partition: $usage<br>"
     fi
 done <<< $DISK_USAGE
  
@@ -19,4 +18,4 @@ done <<< $DISK_USAGE
 
  #echo "$MESSAGE | mail.sh "High Disk Usage" rajithagona.7310@gmail.com"
 
-sh mail.sh "Monitering Team" "High Disk Usage" "$MESSAGE" "rajithagona.7310@gmail.com" "High Alert"
+sh mail.sh "DevOps Team" "High Disk Usage" "$MESSAGE" "rajithagona.7310@gmail.com" "High Alert"
